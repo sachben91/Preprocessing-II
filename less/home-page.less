@@ -1,13 +1,24 @@
 .home {
 
+header{
+  border-bottom: 3px dashed @navigation-border;
+  padding-bottom: 20px;
+  img{
+    padding-bottom: 10px;
+  }
+  h1{
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
   .content-section {
     margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
+
+
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -19,6 +30,18 @@
 
       img {
         border-radius: 10px;
+      }
+    }
+    @media(max-width: 500px)
+    {
+      flex-wrap: wrap;
+      .text-content{
+        width: 100%;
+      }
+      .img-content{
+        width: 100%;
+        padding-top: 5px;
+        justify-content: center;
       }
     }
   }
@@ -36,7 +59,12 @@
       padding-right: 1%;
       padding-left: 0;
     }
-  }
+    @media(max-width: 500px)
+    {
+        flex-wrap: wrap-reverse;
+      }
+    }
+
 
   .content-destination {
     width: 75%;
@@ -44,6 +72,12 @@
 
     img {
       border-radius: 10px;
+    }
+    @media( max-width: 500px)
+    {
+      width: 100%;
+      margin: 0 auto;
+      padding-bottom: 20px;
     }
   }
 
@@ -56,6 +90,16 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+    }
+    .btn{
+      .buttonmixin(15px,12px);
+    }
+    @media(max-width: 500px){
+      flex-wrap: wrap;
+      justify-content: center;
+      .destination{
+        width: 70%;
+      }
     }
   }
 }// home
