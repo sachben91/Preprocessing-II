@@ -1,1 +1,16 @@
 // Mixins in here
+.flex-center(@justify, @align){
+  display: flex;
+  justify-content: @justify;
+  align-items: @align;
+}
+.buttonmixin(@btnpadding, @btnradius)
+{
+  background-color: @button-bg;
+  border-radius: @btnradius;
+  padding: @btnpadding;
+  text-align: center;
+  font-size: 1.6rem;
+  color: white;
+  margin-top: 20px;
+}
